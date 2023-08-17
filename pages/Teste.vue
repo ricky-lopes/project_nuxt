@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="w-full bg-slate-400">
+        <div class="w-full">
           <h2>Pagina Teste</h2>
         </div>    
     </div>

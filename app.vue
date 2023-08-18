@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="w-full h-full p-6 bg-slate-400">
+  <div class="w-full p-6 bg-slate-50 h-screen">
     <NuxtPage />
   </div>
   <Footer />

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex w-full bg-black h-8 p-8 justify-between items-center">
+    <div class="flex w-full bg-green-600 h-8 p-8 justify-between items-center shadow-2xl">
         <nuxt-link class="text-white" to="/">
             <h1 class="font-bold text-white">Julia Zeinade Personal</h1>
         </nuxt-link>

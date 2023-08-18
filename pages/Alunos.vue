@@ -2,13 +2,17 @@
   <div>
     <div class="w-full flex gap-3 items-center">
       <h1 class="font-bold text-3xl">Alunos</h1>
-      <button @click="showModal = true">Cadastrar Novo</button>
+      <button class="bg-green-600 text-white p-3 rounded-3xl hover:bg-white hover:text-green-600 hover:shadow-2xl" @click="showModal = true">Cadastrar</button>
     </div>
     <Modal v-show="showModal" @close-modal="showModal = false" />
 
     <!-- <div class="save-btn">
       <button @click="showModal = true">Save</button>
     </div> -->
+
+    <div class="p-8">
+      <Table />
+    </div>
   </div>
 
 </template>
@@ -27,18 +31,4 @@ export default {
 </script>
 
 <style>
-button {
-  background-color: #000;
-  width: 150px;
-  height: 40px;
-  color: white;
-  font-size: 14px;
-  border-radius: 16px;
-
-  &:hover {
-    background-color: white;
-    color: #000;
-    border: 1px solid #000;
-  }
-}
 </style>

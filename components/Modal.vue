@@ -5,7 +5,7 @@
             <h2 class="font-bold">Novo Aluno</h2>
             <div class="close" @click="$emit('close-modal')">
                 <button class="close-img">
-                  <h2 class="font-bold bg-green-600 px-1 rounded hover:bg-white hover:text-green-600">X</h2>
+                  <h2 class="font-bold bg-red-600 px-1 rounded hover:bg-white hover:text-red-600">X</h2>
                 </button>
             </div>
         </div>
@@ -21,7 +21,7 @@
             <UInput placeholder="Apenas números" type="number" icon="i-heroicons-user" /></UFormGroup>
 
             <div class="flex justify-center w-full">
-              <button class="mt-32 bg-green-600 font-bold px-1 rounded hover:bg-white hover:text-green-600" type="submit">Send</button>
+              <button class="mt-32 bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
 
             </div>
           </div>

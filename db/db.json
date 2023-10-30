@@ -1,0 +1,25 @@
+{
+    "people": [
+        {
+            "id": 1,
+            "Nome": "Lindsay Walton",
+            "Idade": 20,
+            "email": "lindsay.walton@example.com",
+            "role": "Member"
+        },
+        {
+            "id": 2,
+            "Nome": "Malcon Walton",
+            "Idade": 20,
+            "email": "lindsay.walton@example.com",
+            "role": "Member"
+        },
+        {
+            "id": 3,
+            "Nome": "Teste Walton",
+            "Idade": 20,
+            "email": "lindsay.walton@example.com",
+            "role": "Member"
+        }
+    ]
+}

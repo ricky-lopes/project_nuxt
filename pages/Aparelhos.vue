@@ -2,7 +2,7 @@
   <div>
     <div class="w-full flex gap-3 items-center">
       <h1 class="font-bold text-3xl">Aparelhos</h1>
-      <button class="bg-red-600 text-white p-3 rounded-3xl hover:bg-white hover:text-red-600 hover:shadow-2xl" @click="showModal = true">Cadastrar</button>
+      <button class="btn-primary" @click="showModal = true">Cadastrar</button>
     </div>
     <Modal v-show="showModal" @close-modal="showModal = false" title="Novo Aparelho">
       <form action="https://formeezy.com/api/v1/forms/64de9513a8e5560008bc2896/submissions" method="POST" enctype="multipart/form-data">
@@ -22,9 +22,11 @@
           </div>
         </form>
     </Modal>
+
     <div class="p-8">
       <Table :data="peoples" />
     </div>
+    
   </div>
 
 </template>

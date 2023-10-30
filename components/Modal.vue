@@ -2,37 +2,21 @@
   <div class="modal-overlay" @click="$emit('close-modal')">
     <div class="modal" @click.stop>
         <div class="flex justify-between items-center">
-            <h2 class="font-bold">Novo Aluno</h2>
+            <h2 class="font-bold">{{ title }}</h2>
             <div class="close" @click="$emit('close-modal')">
                 <button class="close-img">
                   <h2 class="font-bold bg-red-600 px-1 rounded hover:bg-white hover:text-red-600">X</h2>
                 </button>
             </div>
         </div>
-        <form action="https://formeezy.com/api/v1/forms/64de9513a8e5560008bc2896/submissions" method="POST" enctype="multipart/form-data">
-          <div class="flex flex-col mt-32">
-            <UFormGroup label="Nome" required>
-            <UInput placeholder="Fulano da silva..." icon="i-heroicons-user" /></UFormGroup>
-
-            <UFormGroup label="Email" required>
-            <UInput placeholder="you@example.com" icon="i-heroicons-envelope" /></UFormGroup>
-
-            <UFormGroup label="Idade" required>
-            <UInput placeholder="Apenas números" type="number" icon="i-heroicons-user" /></UFormGroup>
-
-            <div class="flex justify-center w-full">
-              <button class="mt-32 bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
-
-            </div>
-          </div>
-            
-        </form>
+        <slot></slot>
     </div>
   </div>
 </template>
   
   <script>
     export default {
+      props:['title']
   }
   </script>
 

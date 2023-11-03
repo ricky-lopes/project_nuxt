@@ -1,8 +1,6 @@
 <script setup>
     const props = defineProps(['data'])
 
-    console.log(props.data)
-
     const page = ref(1)
     const pageCount = 5
 
@@ -13,8 +11,8 @@
 
 <template>
     <div>
-        <UTable :rows="filteredRows ?? rows" />
+        <UTable :rows="rows" />
 
-        <UPagination v-model="page" :page-count="pageCount" :total="props.data.length" />
+        <UPagination v-model="page" :page-count="pageCount" :total="props.data.length" :active-button="{ color: 'red' }" :inactive-button="{ color: 'gray' }"/>
     </div>
 </template>

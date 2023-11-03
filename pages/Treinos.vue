@@ -7,14 +7,17 @@
     <Modal v-show="showModal" @close-modal="showModal = false" title="Novo Treino">
       <form action="https://formeezy.com/api/v1/forms/64de9513a8e5560008bc2896/submissions" method="POST" enctype="multipart/form-data">
           <div class="flex flex-col">
-            <UFormGroup label="Nome" required>
-            <UInput placeholder="Fulano da silva..." icon="i-heroicons-user" /></UFormGroup>
+            <UFormGroup label="Aluno" required>
+            <USelect  placeholder="Fulano da Silva..." :options="data" icon="i-heroicons-user" option-attribute="name"/></UFormGroup>
 
-            <UFormGroup label="Email" required>
-            <UInput placeholder="you@example.com" icon="i-heroicons-envelope" /></UFormGroup>
+            <UFormGroup label="Aparelho" required>
+            <USelect placeholder="Voador" :options="equipment" icon="i-heroicons-cog-6-tooth-20-solid" option-attribute="name"/></UFormGroup>
 
-            <UFormGroup label="Idade" required>
-            <UInput placeholder="Apenas números" type="number" icon="i-heroicons-user" /></UFormGroup>
+            <UFormGroup label="Exercício" required>
+            <USelect placeholder="Remada Alta" :options="training" icon="i-heroicons-heart" option-attribute="name"/></UFormGroup>
+
+            <UFormGroup label="Repetições" required>
+            <UInput placeholder="3x12" icon="i-heroicons-arrow-path" option-attribute="name"/></UFormGroup>
 
             <div class="flex justify-center w-full">
               <button class="mt-12 bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
@@ -32,6 +35,51 @@
 
 <script>
 import Modal from '~/components/Modal.vue'
+
+const people = [
+  {
+    name: 'Fulano de lá',
+    value: 'CA',
+  },
+  {
+    name: 'Dagoberto Roberto',
+    value: 'EUA',
+  },
+  {
+    name: 'Rubens Robson da Silva',
+    value: 'BR',
+  }
+]
+
+const equipment = [
+  {
+    name: 'Voador',
+    value: 'CA',
+  },
+  {
+    name: 'Flexora',
+    value: 'EUA',
+  },
+  {
+    name: 'Crossover',
+    value: 'BR',
+  }
+]
+
+const training = [
+  {
+    name: 'Remada Alta',
+    value: 'CA',
+  },
+  {
+    name: 'Rosca Alternada',
+    value: 'EUA',
+  },
+  {
+    name: 'Levantamento Lateral',
+    value: 'BR',
+  }
+]
 
 export default {
   components: { Modal },
@@ -87,7 +135,10 @@ export default {
             Repetições: '3x15',
             Carga: '200kg'
         }
-      ]
+      ],
+      data: people,
+      equipment: equipment,
+      training: training
     }
   },
 }

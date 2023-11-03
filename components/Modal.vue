@@ -42,7 +42,7 @@
   text-align: center;
   background-color: white;
   width: 500px;
-  height: 350px;
+  height: fit-content;
   margin-top: 10%;
   padding: 24px;
   border-radius: 20px;

@@ -1,0 +1,19 @@
+{
+    "menus": [
+        {
+            "id": 1,
+            "name": "Alunos",
+            "route": "/Alunos"
+        },
+        {
+            "id": 2,
+            "name": "Aparelhos",
+            "route": "/Aparelhos"
+        },
+        {
+            "id": 3,
+            "name": "Treinos",
+            "route": "/Treinos"
+        }
+    ]
+}

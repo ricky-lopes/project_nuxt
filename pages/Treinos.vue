@@ -20,7 +20,7 @@
             <UInput placeholder="3x12" icon="i-heroicons-arrow-path" option-attribute="name"/></UFormGroup>
 
             <div class="flex justify-center w-full">
-              <button class="mt-12 bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
+              <button class="mt-12 text-white bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
             </div>
           </div>
         </form>

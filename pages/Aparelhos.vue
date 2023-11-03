@@ -17,7 +17,7 @@
             <UInput placeholder="200 Kg" type="number" icon="i-heroicons-hand-raised" /></UFormGroup>
 
             <div class="flex justify-center w-full">
-              <button class="mt-12 btn-primary" type="submit">Cadastrar</button>
+              <button class="mt-12 text-white btn-primary" type="submit">Cadastrar</button>
             </div>
           </div>
         </form>

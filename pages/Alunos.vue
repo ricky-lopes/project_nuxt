@@ -6,20 +6,42 @@
     </div>
     <Modal v-show="showModal" @close-modal="showModal = false" title="Novo Aluno">
       <form action="https://formeezy.com/api/v1/forms/64de9513a8e5560008bc2896/submissions" method="POST" enctype="multipart/form-data">
+        <div class="flex w-full justify-between">
           <div class="flex flex-col">
+
             <UFormGroup label="Nome" required>
             <UInput placeholder="Fulano da silva..." icon="i-heroicons-user" /></UFormGroup>
 
-            <UFormGroup label="Email" required>
+            <UFormGroup label="Idade" required>
+            <UInput placeholder="Apenas números" type="number" icon="i-heroicons-gift" /></UFormGroup>
+
+            <UFormGroup label="Peso" required>
+            <UInput placeholder="80Kg" type="number" icon="i-heroicons-clipboard-document-list" /></UFormGroup>
+            
+          </div>
+          <div class="flex flex-col">
+
+            <UFormGroup label="Altura" required>
+            <UInput placeholder="1,20" type="number" icon="i-heroicons-arrow-long-up-20-solid" /></UFormGroup>
+
+            <UFormGroup label="Celular" required>
+            <UInput placeholder="(43) 99999-9999" icon="i-heroicons-phone" /></UFormGroup>
+
+            <UFormGroup label="Email">
             <UInput placeholder="you@example.com" icon="i-heroicons-envelope" /></UFormGroup>
 
-            <UFormGroup label="Idade" required>
-            <UInput placeholder="Apenas números" type="number" icon="i-heroicons-user" /></UFormGroup>
-
-            <div class="flex justify-center w-full">
-              <button class="mt-12 bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
-            </div>
           </div>
+        </div>
+        <div class="flex flex-col w-full">
+          <UFormGroup label="Objetivo" required>
+          <UTextarea placeholder="Aumento de massa corporal..." icon="i-heroicons-envelope" /></UFormGroup>
+
+          <UFormGroup label="Observação">
+          <UTextarea placeholder="Problemas cardíacos..." icon="i-heroicons-envelope" /></UFormGroup>
+        </div>
+        <div class="flex justify-center w-full">
+          <button class="mt-12 text-white bg-red-600 font-bold px-1 rounded hover:bg-white hover:text-red-600" type="submit">Send</button>
+        </div>
         </form>
     </Modal>
 
